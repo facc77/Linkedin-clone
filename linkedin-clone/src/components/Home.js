@@ -1,5 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import LeftSide from "./LeftSide";
+import Main from "./Main";
+import RightSide from "./RightSide";
 
 export default function Home(props) {
   return (
@@ -11,9 +14,9 @@ export default function Home(props) {
         <p>Encuentra gente talentosa en tiempo record y levanta tu negocio</p>
       </Section>
       <Layout>
-        <div>Left side</div>
-        <div>main</div>
-        <div>right side</div>
+        <LeftSide />
+        <Main />
+        <RightSide />
       </Layout>
     </Container>
   );
