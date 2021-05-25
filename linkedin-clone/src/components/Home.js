@@ -3,14 +3,17 @@ import styled from "styled-components";
 import LeftSide from "./LeftSide";
 import Main from "./Main";
 import RightSide from "./RightSide";
+import { Redirect } from "react-router-dom";
+import { connect } from "react-redux";
 
-export default function Home(props) {
+function Home(props) {
   return (
     <Container>
+      {!props.user && <Redirect to="/" />}
       <Section>
         <h5>
           <a>Contratando ya!</a>
-        </h5>{" "}
+        </h5>
         <p>Encuentra gente talentosa en tiempo record y levanta tu negocio</p>
       </Section>
       <Layout>
@@ -76,3 +79,11 @@ const Layout = styled.div`
     padding: 0 5px;
   }
 `;
+
+const mapStateToProps = (state) => {
+  return {
+    user: state.userState.user,
+  };
+};
+
+export default connect(mapStateToProps)(Home);
