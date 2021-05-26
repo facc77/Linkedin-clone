@@ -30,8 +30,9 @@ export default function Rightside(props) {
             </div>{" "}
           </li>
         </FeedList>
-        <Recommendation>ver recomendaciones</Recommendation>
-        <img src="/images/right-icon.svg" alt="" />
+        <Recommendation>
+          ver recomendaciones <img src="/images/right-icon.svg" alt="" />
+        </Recommendation>
       </FollowCard>
       <BannerCard>
         <img src="/images/jobs.jpg" alt="" />
